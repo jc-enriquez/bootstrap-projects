@@ -6,6 +6,32 @@
   z-index: -1;
 }
 
+.navbar-brand::after {
+  content: "";
+  border-bottom: 3px solid blue;
+  width: 70%;
+  display: block;
+  margin-left: 30%;
+}
+
+.nav-link::before {
+  content: "";
+  border-top: 3px solid blue;
+  width: 35%;
+  display: block;
+}
+
 #header-controls {
   margin-top: -5em;
+}
+
+.block {
+  height: 0.4em;
+  width: 10%;
+  background-color: blue;
+}
+
+.img-height {
+  height: 20em;
+  object-fit: cover;
 }
