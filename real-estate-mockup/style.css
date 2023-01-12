@@ -1,3 +1,6 @@
+:root {
+  --primary-color: #0d6efd;
+}
 #hero-image {
   background-image: url("images/header-image.jpg");
   background-size: cover;
@@ -8,22 +11,15 @@
 
 .navbar-brand::after {
   content: "";
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid var(--primary-color);
   width: 70%;
   display: block;
   margin-left: 30%;
 }
 
-.navbar-brand:last-of-type::after {
-  content: "";
-  border-bottom: 3px solid red;
-  width: 70%;
-  margin-right: 30%;
-}
-
 .nav-link::before {
   content: "";
-  border-top: 3px solid blue;
+  border-top: 3px solid var(--primary-color);
   width: 35%;
   display: block;
 }
@@ -35,7 +31,7 @@
 .block {
   height: 0.4em;
   width: 10%;
-  background-color: blue;
+  background-color: var(--primary-color);
 }
 
 .img-height {

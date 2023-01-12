@@ -1,0 +1,7 @@
+.navbar-brand > img {
+  filter: grayscale(100%);
+}
+
+section {
+  height: 100vh;
+}
