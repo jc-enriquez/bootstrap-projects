@@ -1,7 +1,22 @@
-.navbar-brand > img {
+img {
   filter: grayscale(100%);
 }
 
-section {
-  height: 100vh;
+.social-media {
+  position: absolute;
+  top: 44em;
+}
+
+.img-height {
+  height: 20em;
+  width: 15em;
+  object-fit: cover;
+}
+
+#about-h1 {
+  font-size: 4em;
+}
+
+.img-about {
+  height: 30em;
 }
