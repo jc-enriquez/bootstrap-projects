@@ -19,4 +19,32 @@ img {
 
 .img-about {
   height: 30em;
+  width: 30em;
+}
+
+.swiper-wrapper-about {
+  margin-left: 34em;
+}
+
+.swiper-pagination-bullet {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  opacity: 0.7;
+  background: transparent;
+}
+
+.swiper-pagination-bullet-active {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.swiper-pagination {
+  margin-bottom: 22em;
+}
+
+.avatar {
+  height: 20em;
+  width: 20em;
+  object-fit: cover;
 }

@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+const swiperHome = new Swiper(".swiper-home", {
   slidesPerView: 4,
   spaceBetween: 30,
   centeredSlides: true,
@@ -33,23 +33,25 @@ const swiper = new Swiper(".swiper", {
     },
     1025: {
       slidesPerView: 4,
-      spaceBetween: 40,
     },
   },
 });
 
-const swiper2 = new Swiper(".mySwiper", {
-  spaceBetween: 10,
-  slidesPerView: 4,
-  watchSlidesProgress: true,
-});
-const swiper3 = new Swiper(".mySwiper2", {
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+let labels = [
+  "Architecture",
+  "Landscape",
+  "Interior",
+  "Product Design",
+  "Graphic Design",
+];
+
+const swiperAbout = new Swiper(".swiper-about", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<div class="' + className + '">' + labels[index] + "</div>";
+    },
   },
-  thumbs: {
-    swiper: swiper,
-  },
+  effect: "fade",
 });
