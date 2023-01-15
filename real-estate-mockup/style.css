@@ -40,10 +40,51 @@
 }
 
 .avatar-img {
-  height: 7em;
+  height: 5em;
+  width: 5em;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: black;
+  color: #ffffff;
+}
+
+#slide-1 {
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(90, 92, 106, 0.5) 0%,
+      rgba(32, 45, 58, 0.5) 81.3%
+    ),
+    url("images/boston.jpg");
+  background-position: center;
+}
+
+#slide-2 {
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(90, 92, 106, 0.5) 0%,
+      rgba(32, 45, 58, 0.5) 81.3%
+    ),
+    url("images/chicago.jpg");
+  background-position: center;
+}
+
+#slide-3 {
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(90, 92, 106, 0.5) 0%,
+      rgba(32, 45, 58, 0.5) 81.3%
+    ),
+    url("images/miami.jpg");
+  background-position: center;
+}
+
+#slide-4 {
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(90, 92, 106, 0.5) 0%,
+      rgba(32, 45, 58, 0.5) 81.3%
+    ),
+    url("images/new york.jpg");
+  background-position: center;
 }
