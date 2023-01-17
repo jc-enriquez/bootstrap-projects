@@ -17,15 +17,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="lightbox.min.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
       <!-- Navigation Bar -->
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container align-items-center">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="" srcset="" id="navbar-logo" />
           </a>
           <button
@@ -42,7 +44,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="#"
+                <a
+                  class="nav-link text-white"
+                  aria-current="page"
+                  href="index.html"
                   >Home</a
                 >
               </li>
@@ -93,66 +98,57 @@
       <!-- End of Hero Section -->
       <!-- Gallery Section -->
       <section id="gallery" class="container">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <h2 class="mb-4">Gallery</h2>
+        <ul class="nav nav-tabs mx-auto" id="myTab" role="tablist">
+          <!-- Navlink for Wedding -->
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link active text-secondary me-5 px-5"
+              class="nav-link active text-secondary"
               id="home-tab"
               data-bs-toggle="tab"
-              data-bs-target="#home-tab-pane"
+              data-bs-target="#wedding-tab-pane"
               type="button"
               role="tab"
-              aria-controls="home-tab-pane"
+              aria-controls="wedding-tab-pane"
               aria-selected="true"
             >
-              Home
+              Wedding
             </button>
           </li>
+          <!-- End of Navlink for Wedding -->
+          <!-- Navlink for Birthday -->
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link text-secondary me-5 px-5"
+              class="nav-link text-secondary"
               id="profile-tab"
               data-bs-toggle="tab"
-              data-bs-target="#profile-tab-pane"
+              data-bs-target="#birthday-tab-pane"
               type="button"
               role="tab"
-              aria-controls="profile-tab-pane"
+              aria-controls="birthday-tab-pane"
               aria-selected="false"
             >
-              Profile
+              Birthday
             </button>
           </li>
+          <!-- End of Navlink for Birthday -->
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link text-secondary me-5 px-5"
+              class="nav-link text-secondary"
               id="contact-tab"
               data-bs-toggle="tab"
-              data-bs-target="#contact-tab-pane"
+              data-bs-target="#graduation-tab-pane"
               type="button"
               role="tab"
-              aria-controls="contact-tab-pane"
+              aria-controls="graduation-tab-pane"
               aria-selected="false"
             >
-              Contact
+              Graduation
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link text-secondary me-5 px-5"
-              id="contact-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#contact-tab-pane"
-              type="button"
-              role="tab"
-              aria-controls="contact-tab-pane"
-              aria-selected="false"
-            >
-              Contact
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link text-secondary px-5"
+              class="nav-link text-secondary d-none d-md-block"
               id="contact-tab"
               data-bs-toggle="tab"
               data-bs-target="#contact-tab-pane"
@@ -165,34 +161,193 @@
             </button>
           </li>
         </ul>
+        <!-- Wedding Tab -->
         <div class="tab-content" id="myTabContent">
           <div
             class="tab-pane fade show active"
-            id="home-tab-pane"
+            id="wedding-tab-pane"
             role="tabpanel"
             aria-labelledby="home-tab"
             tabindex="0"
           >
-            ...
+            <div class="row mt-5">
+              <div class="col-lg-6">
+                <div class="row row-gap-2 col-gap-1">
+                  <div class="col-lg-6">
+                    <a href="images/tab1-img1.jpg" data-lightbox="wedding">
+                      <img
+                        src="images/tab1-img1.jpg"
+                        alt=""
+                        class="upper-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-6">
+                    <a href="images/tab1-img2.jpg" data-lightbox="wedding">
+                      <img
+                        src="images/tab1-img2.jpg"
+                        alt=""
+                        class="upper-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-12">
+                    <a href="images/tab1-img3.jpg" data-lightbox="wedding">
+                      <img
+                        src="images/tab1-img3.jpg"
+                        alt=""
+                        class="lower-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <a href="images/tab1-img4.jpg" data-lightbox="wedding">
+                  <img
+                    src="images/tab1-img4.jpg"
+                    alt=""
+                    class="solo-img mx-auto d-block"
+                  />
+                </a>
+              </div>
+              <div class="col-lg-2">
+                <blockquote>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                  laboriosam quis nisi eos rerum deserunt consequatur quasi
+                  nostrum vero mollitia corporis saepe esse dolore facilis
+                  molestias, ad voluptas porro quo. Consequatur id rem modi ipsa
+                  neque laboriosam ut! Consequatur sed cum voluptate quis et
+                  corrupti modi, libero voluptates! Cupiditate, nostrum!
+                </blockquote>
+              </div>
+            </div>
           </div>
+          <!-- End of Wedding Tab -->
+          <!-- Birthday Tab -->
           <div
             class="tab-pane fade"
-            id="profile-tab-pane"
+            id="birthday-tab-pane"
             role="tabpanel"
             aria-labelledby="profile-tab"
             tabindex="0"
           >
-            ...
+            <div class="row mt-5">
+              <div class="col-lg-4">
+                <a href="images/tab2-img4.jpg" data-lightbox="birthday">
+                  <img
+                    src="images/tab2-img4.jpg"
+                    alt=""
+                    class="solo-img mx-auto d-block"
+                  />
+                </a>
+              </div>
+              <div class="col-lg-6">
+                <div class="row row-gap-2 col-gap-1">
+                  <div class="col-lg-12">
+                    <a href="images/tab2-img3.jpg" data-lightbox="birthday">
+                      <img
+                        src="images/tab2-img3.jpg"
+                        alt=""
+                        class="lower-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-6">
+                    <a href="images/tab2-img1.jpg" data-lightbox="birthday">
+                      <img
+                        src="images/tab2-img1.jpg"
+                        alt=""
+                        class="upper-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-6">
+                    <a href="images/tab2-img2.jpg" data-lightbox="birthday">
+                      <img
+                        src="images/tab2-img2.jpg"
+                        alt=""
+                        class="upper-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <blockquote>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                  laboriosam quis nisi eos rerum deserunt consequatur quasi
+                  nostrum vero mollitia corporis saepe esse dolore facilis
+                  molestias, ad voluptas porro quo. Consequatur id rem modi ipsa
+                  neque laboriosam ut! Consequatur sed cum voluptate quis et
+                  corrupti modi, libero voluptates! Cupiditate, nostrum!
+                </blockquote>
+              </div>
+            </div>
           </div>
+          <!-- End of Birthday Tab -->
+          <!-- Graduation Tab -->
           <div
             class="tab-pane fade"
-            id="contact-tab-pane"
+            id="graduation-tab-pane"
             role="tabpanel"
             aria-labelledby="contact-tab"
             tabindex="0"
           >
-            ...
+            <div class="row mt-5">
+              <div class="col-lg-2">
+                <blockquote>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                  laboriosam quis nisi eos rerum deserunt consequatur quasi
+                  nostrum vero mollitia corporis saepe esse dolore facilis
+                  molestias, ad voluptas porro quo. Consequatur id rem modi ipsa
+                  neque laboriosam ut! Consequatur sed cum voluptate quis et
+                  corrupti modi, libero voluptates! Cupiditate, nostrum!
+                </blockquote>
+              </div>
+              <div class="col-lg-6">
+                <div class="row row-gap-2 col-gap-1">
+                  <div class="col-lg-6">
+                    <a href="images/tab3-img1.jpg" data-lightbox="graduation">
+                      <img
+                        src="images/tab3-img1.jpg"
+                        alt=""
+                        class="upper-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-6">
+                    <a href="images/tab3-img2.jpg" data-lightbox="graduation">
+                      <img
+                        src="images/tab3-img2.jpg"
+                        alt=""
+                        class="upper-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-12">
+                    <a href="images/tab3-img3.jpg" data-lightbox="graduation">
+                      <img
+                        src="images/tab3-img3.jpg"
+                        alt=""
+                        class="lower-img mx-auto d-block"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <a href="images/tab3-img4.jpg" data-lightbox="graduation">
+                  <img
+                    src="images/tab3-img4.jpg"
+                    alt=""
+                    class="solo-img mx-auto d-block"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
+          <!-- End of Graduation Tab -->
           <div
             class="tab-pane fade"
             id="disabled-tab-pane"
@@ -209,5 +364,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="lightbox-plus-jquery.min.js"></script>
   </body>
 </html>

@@ -13,8 +13,34 @@ section {
 
 img {
   filter: grayscale(100%);
+  object-fit: cover;
 }
 
 #navbar-logo {
   height: 5em;
+}
+
+.upper-img {
+  height: 20em;
+  width: 20em;
+}
+
+.lower-img {
+  height: 20em;
+  width: 40.5em;
+}
+
+.solo-img {
+  height: 40.5em;
+}
+
+@media only screen and (max-width: 500px) {
+  .lower-img {
+    width: 20em;
+  }
+  .solo-img {
+    height: 20em;
+    width: 20em;
+    margin-top: 0.5em;
+  }
 }
