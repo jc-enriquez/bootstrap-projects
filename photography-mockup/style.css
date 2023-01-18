@@ -1,7 +1,10 @@
-body {
+body,
+.card,
+.custom-btn {
   background-color: #0c0c0c;
   color: #ffffff;
 }
+
 section {
   height: 100vh;
 }
@@ -43,4 +46,8 @@ img {
     width: 20em;
     margin-top: 0.5em;
   }
+}
+
+.recent-img {
+  height: 20em;
 }
