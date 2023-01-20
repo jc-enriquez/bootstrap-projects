@@ -5,10 +5,6 @@ body,
   color: #ffffff;
 }
 
-section {
-  height: 90vh;
-}
-
 #hero {
   background-image: url("images/header-img.jpg");
   background-position: 25em 0em;
@@ -50,4 +46,12 @@ img {
 
 .recent-img {
   height: 20em;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff;
+}
+.swiper-scrollbar {
+  background-color: #ffffff;
 }
