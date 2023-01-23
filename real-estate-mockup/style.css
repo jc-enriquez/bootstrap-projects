@@ -1,6 +1,10 @@
 :root {
   --primary-color: #0d6efd;
 }
+section {
+  min-height: 100vh;
+}
+
 #hero-image {
   background-image: url("images/header-image.jpg");
   background-size: cover;
@@ -87,4 +91,57 @@
     ),
     url("images/new york.jpg");
   background-position: center;
+}
+
+.brands {
+  filter: grayscale(100%);
+  width: 10em;
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+}
+
+.footer-brand::after {
+  content: "";
+  border-bottom: 3px solid var(--primary-color);
+  width: 25%;
+  display: block;
+  margin-left: 9%;
+}
+
+.footer-block {
+  height: 0.2em;
+  width: 40%;
+  background-color: var(--primary-color);
+  margin: 0.5em 0em;
+}
+
+@media screen and (max-width: 480px) {
+  .nav-link::before {
+    width: 5%;
+  }
+  .footer-brand::after {
+    margin-left: 14%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .nav-link::before {
+    width: 2%;
+  }
+  .footer-brand::after {
+    width: 10%;
+    margin-left: 11%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .nav-link::before {
+    width: 2%;
+  }
+  .footer-brand::after {
+    width: 10%;
+    margin-left: 11%;
+  }
 }
