@@ -17,22 +17,18 @@ const swiperHome = new Swiper(".swiper-home", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 10,
     },
     480: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 40,
     },
     640: {
       slidesPerView: 3,
       spaceBetween: 40,
     },
-    769: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-    1025: {
+    1200: {
       slidesPerView: 4,
+      spaceBetween: 40,
     },
   },
 });
@@ -55,3 +51,22 @@ const swiperAbout = new Swiper(".swiper-about", {
   },
   effect: "fade",
 });
+
+let mybutton = document.getElementById("scroll-btn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

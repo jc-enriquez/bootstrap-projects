@@ -10,25 +10,32 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
     <!-- Swiper CSS CDN-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <!-- Image hover CSS -->
+    <link rel="stylesheet" href="css/imagehover.min.css" />
     <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <main class="container">
       <!-- Start of Navigation Bar -->
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar py-0 my-0 navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img
               src="images/logo.png"
               alt="Arkitektura Logo"
               srcset=""
-              class="w-sm-25"
+              class="logo"
             />
           </a>
           <button
@@ -50,10 +57,10 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">About Us</a>
+                <a class="nav-link active" href="about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="blog.html">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
@@ -65,83 +72,73 @@
       <!-- End of Navigation Bar -->
       <!-- Header -->
       <header>
-        <h1 class="my-5 w-75 text-justify fw-normal" id="about-h1">
+        <h1 class="my-2 my-lg-5 w-75 text-justify fw-normal custom-text">
           We create architecture, landscapes, interiors, product design and
           graphic design.
         </h1>
       </header>
       <!-- End of Header -->
       <!-- Projects Section -->
-      <section>
+      <section class="mt-4">
         <h2 class="fw-light">Projects</h2>
         <hr />
         <!-- Start of Row -->
-        <div class="row">
+        <div class="row py-4">
           <div class="col-lg-2"></div>
-          <div class="col-lg-5">
-            <div class="card border-0">
-              <img
-                src="images/image-1.jpg"
-                class="card-img-top img-about"
-                alt="..."
-              />
+          <article class="col-lg-5">
+            <figure class="card border-0 mx-auto">
+              <img src="images/image-1.jpg" class="img-about w-100" alt="..." />
               <div class="card-body px-0">
-                <small class="text-muted text-uppercase">insert caption</small>
-                <h5 class="card-title">Card title</h5>
+                <small class="text-muted text-uppercase">2006-2008</small>
+                <h5 class="card-title">Bicycle rights heirloom green juice</h5>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="card border-0">
-              <img
-                src="images/image-2.jpg"
-                class="card-img-top img-about"
-                alt="..."
-              />
+            </figure>
+          </article>
+          <article class="col-lg-5">
+            <figure class="card border-0 mx-auto">
+              <img src="images/image-2.jpg" class="img-about w-100" alt="..." />
               <div class="card-body px-0">
-                <small class="text-muted text-uppercase">insert caption</small>
-                <h5 class="card-title">Card title</h5>
+                <small class="text-muted text-uppercase">2008-2010</small>
+                <h5 class="card-title">
+                  Taxidermy drinking vinegar freegan microdosing
+                </h5>
               </div>
-            </div>
-          </div>
+            </figure>
+          </article>
         </div>
         <!-- End of Row -->
         <div class="row">
           <div class="col-lg-2"></div>
-          <div class="col-lg-5">
-            <div class="card border-0">
-              <img
-                src="images/image-3.jpg"
-                class="card-img-top img-about"
-                alt="..."
-              />
+          <article class="col-lg-5">
+            <figure class="card border-0">
+              <img src="images/image-3.jpg" class="img-about w-100" alt="..." />
               <div class="card-body px-0">
-                <small class="text-muted text-uppercase">insert caption</small>
-                <h5 class="card-title">Card title</h5>
+                <small class="text-muted text-uppercase">2010-2012</small>
+                <h5 class="card-title">
+                  Leggings chambray vice put a bird on it fanny pack
+                </h5>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="card border-0">
-              <img
-                src="images/image-4.jpg"
-                class="card-img-top img-about"
-                alt="..."
-              />
+            </figure>
+          </article>
+          <article class="col-lg-5">
+            <figure class="card border-0">
+              <img src="images/image-4.jpg" class="img-about w-100" alt="..." />
               <div class="card-body px-0">
-                <small class="text-muted text-uppercase">insert caption</small>
-                <h5 class="card-title">Card title</h5>
+                <small class="text-muted text-uppercase">2012-2014</small>
+                <h5 class="card-title">
+                  Single-origin coffee 90's kale chips cray
+                </h5>
               </div>
-            </div>
-          </div>
+            </figure>
+          </article>
         </div>
       </section>
       <!-- End of Projects Section -->
       <!-- Services Section -->
-      <section class="mt-5" id="services">
+      <section class="mt-5 d-none d-lg-block" id="services">
         <h2 class="fw-light">Services</h2>
         <hr />
-
+        <!-- Start of Row -->
         <div class="row">
           <div class="col-lg-2"></div>
           <div class="col-lg-10">
@@ -150,53 +147,125 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper swiper-wrapper-about">
                 <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="images/image-1.jpg" class="img-about" alt="..." />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/image-2.jpg" class="img-about" alt="..." />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/image-3.jpg" class="img-about" alt="..." />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/image-4.jpg" class="img-about" alt="..." />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/image-5.jpg" class="img-about" alt="..." />
-                </div>
+                <figfigure class="swiper-slide">
+                  <img
+                    src="images/image-1.jpg"
+                    class="img-about w-100"
+                    alt="..."
+                  />
+                </figfigure>
+                <figure class="swiper-slide">
+                  <img
+                    src="images/image-2.jpg"
+                    class="img-about w-100"
+                    alt="..."
+                  />
+                </figure>
+                <figure class="swiper-slide">
+                  <img
+                    src="images/image-3.jpg"
+                    class="img-about w-100"
+                    alt="..."
+                  />
+                </figure>
+                <figure class="swiper-slide">
+                  <img
+                    src="images/image-4.jpg"
+                    class="img-about w-100"
+                    alt="..."
+                  />
+                </figure>
+                <figure class="swiper-slide">
+                  <img
+                    src="images/image-5.jpg"
+                    class="img-about w-100"
+                    alt="..."
+                  />
+                </figure>
               </div>
             </div>
           </div>
+          <!-- End of col-lg-10 -->
         </div>
+        <!-- End of Row -->
+        <!-- Start of Row -->
+        <div class="row mt-2">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-10">
+            <small class="text-muted">About Us</small>
+            <h2 class="custom-text">
+              Arkitektura is a place that is nobody from, but anyone can go to.
+            </h2>
+
+            <small class="mt-4">
+              <a
+                href=""
+                class="text-uppercase text-dark text-decoration-underline"
+                >discover <i class="bi bi-arrow-right"></i
+              ></a>
+            </small>
+          </div>
+        </div>
+        <!-- End of Row -->
       </section>
       <!-- End of Services Section -->
       <!-- Process Section -->
       <section class="mt-5">
         <h2 class="fw-light">Process</h2>
         <hr />
+        <!-- Start of Row -->
         <div class="row">
           <div class="col-lg-2"></div>
+          <!-- Start of col-lg-10 -->
           <div class="col-lg-10">
-            <div class="w-50">
+            <div class="w-75">
               <small class="text-muted d-block mb-3"
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quidem sapiente laboriosam architecto magnam reiciendis veniam
-                aspernatur odio explicabo, expedita deleniti in quas incidunt
-                odit! Totam quam a magnam aliquid, perspiciatis reprehenderit
-                ipsa id enim alias! Necessitatibus consequatur recusandae
-                similique possimus!</small
+                >Direct trade butcher pug, pitchfork hot chicken before they
+                sold out viral same coloring book blue bottle shaman brunch
+                vibecession. Gastropub JOMO asymmetrical lyft deep v hexagon raw
+                denim. Cray hella polaroid brunch sus, man bun YOLO poutine
+                pinterest schlitz lyft dreamcatcher banjo vibecession
+                post-ironic. Jianbing mukbang green juice, slow-carb keytar
+                hexagon pitchfork PBR&B raclette enamel pin live-edge pickled
+                helvetica kickstarter williamsburg. Bushwick subway tile
+                whatever fashion axe enamel pin hell of.</small
               >
 
-              <a
-                href=""
-                class="text-decoration-underline text-uppercase fw-normal fs-6 text-dark"
-                >contact us</a
-              >
+              <small
+                ><a
+                  href=""
+                  class="text-decoration-underline text-uppercase fw-normal text-dark"
+                  >see more <i class="bi bi-arrow-right"></i></a
+              ></small>
             </div>
-            <img src="images/image-6.jpg" alt="" srcset="" class="mt-5 w-100" />
+            <figure>
+              <img
+                src="images/image-6.jpg"
+                alt=""
+                srcset=""
+                class="my-5 w-100"
+              />
+            </figure>
           </div>
+          <!-- End of col-lg-10 -->
         </div>
+        <!-- End of Row -->
+        <!-- Start of Row -->
+        <div class="row mt-5">
+          <div class="col-lg-2"></div>
+          <!-- Start of col-lg-10 -->
+          <div class="col-lg-10">
+            <h2 class="custom-text">Start a project?</h2>
+            <small
+              ><a
+                href=""
+                class="text-decoration-underline text-uppercase fw-normal text-dark"
+                >contact us <i class="bi bi-arrow-right"></i></a
+            ></small>
+          </div>
+          <!-- End of col-lg-10 -->
+        </div>
+        <!-- End of Row -->
       </section>
       <!-- End of Process Section -->
       <!-- Our Team Section -->
@@ -207,89 +276,141 @@
           <div class="col-lg-2"></div>
           <div class="col-lg-10">
             <div class="row row-gap-3 col-gap-1 p-0">
-              <div class="col-lg-4">
+              <figure class="col-lg-4 imghvr-push-up">
                 <img
                   src="images/avatar-1.jpg"
                   alt=""
                   srcset=""
-                  class="avatar"
+                  class="avatar w-100 w-100"
                 />
+                <figcaption
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi bi-linkedin me-3 fs-2"></i>
+                  <i class="bi bi-envelope-at-fill me-3 fs-2"></i>
+                  <i class="bi bi-telephone-fill me-3 fs-2"></i>
+                  <i class="bi bi-behance fs-2"></i>
+                </figcaption>
                 <div class="mt-2">
-                  <p class="fw-bold m-0">Name Here</p>
-                  <small class="text-muted">Role Here</small>
+                  <p class="fw-bold m-0">Ifan Bender</p>
+                  <small class="text-muted">Founder</small>
                 </div>
-              </div>
-              <div class="col-lg-4">
+              </figure>
+              <figure class="col-lg-4 imghvr-push-up">
                 <img
                   src="images/avatar-2.jpg"
                   alt=""
                   srcset=""
-                  class="avatar"
+                  class="avatar w-100"
                 />
+                <figcaption
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi bi-linkedin me-3 fs-2"></i>
+                  <i class="bi bi-envelope-at-fill me-3 fs-2"></i>
+                  <i class="bi bi-telephone-fill me-3 fs-2"></i>
+                  <i class="bi bi-behance fs-2"></i>
+                </figcaption>
                 <div class="mt-2">
-                  <p class="fw-bold m-0">Name Here</p>
-                  <small class="text-muted">Role Here</small>
+                  <p class="fw-bold m-0">Umair Guzman</p>
+                  <small class="text-muted">Lead architect</small>
                 </div>
-              </div>
-              <div class="col-lg-4">
+              </figure>
+              <figure class="col-lg-4 imghvr-push-up">
                 <img
                   src="images/avatar-3.jpg"
                   alt=""
                   srcset=""
-                  class="avatar"
+                  class="avatar w-100"
                 />
+                <figcaption
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi bi-linkedin me-3 fs-2"></i>
+                  <i class="bi bi-envelope-at-fill me-3 fs-2"></i>
+                  <i class="bi bi-telephone-fill me-3 fs-2"></i>
+                  <i class="bi bi-behance fs-2"></i>
+                </figcaption>
                 <div class="mt-2">
-                  <p class="fw-bold m-0">Name Here</p>
-                  <small class="text-muted">Role Here</small>
+                  <p class="fw-bold m-0">Micheal Fletcher</p>
+                  <small class="text-muted">Co-founder</small>
                 </div>
-              </div>
-              <div class="col-lg-4">
+              </figure>
+              <figure class="col-lg-4 imghvr-push-up">
                 <img
                   src="images/avatar-4.jpg"
                   alt=""
                   srcset=""
-                  class="avatar"
+                  class="avatar w-100"
                 />
+                <figcaption
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi bi-linkedin me-3 fs-2"></i>
+                  <i class="bi bi-envelope-at-fill me-3 fs-2"></i>
+                  <i class="bi bi-telephone-fill me-3 fs-2"></i>
+                  <i class="bi bi-behance fs-2"></i>
+                </figcaption>
                 <div class="mt-2">
-                  <p class="fw-bold m-0">Name Here</p>
-                  <small class="text-muted">Role Here</small>
+                  <p class="fw-bold m-0">Elena Goodman</p>
+                  <small class="text-muted">Art Director</small>
                 </div>
-              </div>
-              <div class="col-lg-4">
+              </figure>
+              <figure class="col-lg-4 imghvr-push-up">
                 <img
                   src="images/avatar-5.jpg"
                   alt=""
                   srcset=""
-                  class="avatar"
+                  class="avatar w-100"
                 />
+                <figcaption
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi bi-linkedin me-3 fs-2"></i>
+                  <i class="bi bi-envelope-at-fill me-3 fs-2"></i>
+                  <i class="bi bi-telephone-fill me-3 fs-2"></i>
+                  <i class="bi bi-behance fs-2"></i>
+                </figcaption>
                 <div class="mt-2">
-                  <p class="fw-bold m-0">Name Here</p>
-                  <small class="text-muted">Role Here</small>
+                  <p class="fw-bold m-0">George Vargas</p>
+                  <small class="text-muted">Project Manager</small>
                 </div>
-              </div>
-              <div class="col-lg-4">
+              </figure>
+              <figure class="col-lg-4 imghvr-push-up">
                 <img
                   src="images/avatar-6.jpg"
                   alt=""
                   srcset=""
-                  class="avatar"
+                  class="avatar w-100"
                 />
+                <figcaption
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i class="bi bi-linkedin me-3 fs-2"></i>
+                  <i class="bi bi-envelope-at-fill me-3 fs-2"></i>
+                  <i class="bi bi-telephone-fill me-3 fs-2"></i>
+                  <i class="bi bi-behance fs-2"></i>
+                </figcaption>
                 <div class="mt-2">
-                  <p class="fw-bold m-0">Name Here</p>
-                  <small class="text-muted">Role Here</small>
+                  <p class="fw-bold m-0">Bridget Serrano</p>
+                  <small class="text-muted">CEO</small>
                 </div>
-              </div>
+              </figure>
             </div>
           </div>
         </div>
         <hr />
       </section>
+      <!-- End of Our Team Section -->
+      <!-- Start of Footer -->
       <footer>
         <div class="row">
-          <div class="col-lg-3 text-muted text-uppercase">
-            <span>Arkitektura</span>
+          <div
+            class="col-lg-3 text-muted text-uppercase text-center text-lg-start"
+          >
+            <span>&copy; 2023 Arkitektura</span>
           </div>
-          <div class="col-lg-3 text-muted">
+          <div class="col-lg-3 text-muted d-none d-lg-block">
             <ul>
               <li class="list-group-item text-uppercase">projects</li>
               <li class="list-group-item text-uppercase">services</li>
@@ -298,19 +419,28 @@
               <li class="list-group-item text-uppercase">contact</li>
             </ul>
           </div>
-          <div class="col-lg-3 text-muted">
+          <div class="col-lg-3 text-muted text-muted d-none d-lg-block">
             <ul>
               <li class="list-group-item text-uppercase">facebook</li>
               <li class="list-group-item text-uppercase">instagram</li>
               <li class="list-group-item text-uppercase">twitter</li>
             </ul>
           </div>
-          <div class="col-lg-3 text-muted text-uppercase">
+          <div class="col-lg-3 text-muted text-uppercase d-none d-lg-block">
             <span>contact@arkitektura.com</span>
           </div>
         </div>
       </footer>
-      <!-- End of Our Team Section -->
+      <!-- End of Footer -->
+      <!-- Scroll to top button -->
+      <button
+        onclick="topFunction()"
+        id="scroll-btn"
+        class="btn px-4 py-2 rounded-pill"
+        title="Go to top"
+      >
+        <i class="bi bi-arrow-up"></i>
+      </button>
     </main>
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
