@@ -38,7 +38,8 @@ hr {
   }
 }
 
-.img-about {
+.img-about,
+.img-blog {
   height: 30em;
   object-fit: cover;
 }
@@ -102,4 +103,16 @@ hr {
 
 #scroll-btn:hover {
   opacity: 0.9;
+}
+
+.img-blog-sm {
+  height: 15em;
+}
+
+.custom-card {
+  height: 30em;
+}
+
+.form-control {
+  background: transparent;
 }
