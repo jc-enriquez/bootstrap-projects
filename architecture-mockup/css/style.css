@@ -34,7 +34,6 @@ hr {
 @media screen and (max-width: 480px) {
   .custom-text {
     font-size: 2rem;
-    width: 100%;
   }
 }
 
@@ -87,7 +86,7 @@ hr {
   color: #000;
 }
 
-#scroll-btn {
+#scroll-btn-about {
   display: none;
   position: fixed;
   bottom: 1.5rem;
@@ -101,7 +100,7 @@ hr {
   cursor: pointer;
 }
 
-#scroll-btn:hover {
+#scroll-btn-about:hover {
   opacity: 0.9;
 }
 
@@ -115,4 +114,8 @@ hr {
 
 .form-control {
   background: transparent;
+}
+
+.bi-circle {
+  font-size: 0.6rem;
 }

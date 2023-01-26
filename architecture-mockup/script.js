@@ -52,7 +52,7 @@ const swiperAbout = new Swiper(".swiper-about", {
   effect: "fade",
 });
 
-let mybutton = document.getElementById("scroll-btn");
+let aboutButton = document.getElementById("scroll-btn-about");
 
 window.onscroll = function () {
   scrollFunction();
@@ -60,9 +60,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-    mybutton.style.display = "block";
+    aboutButton.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    aboutButton.style.display = "none";
   }
 }
 
@@ -70,3 +70,5 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+AOS.init();

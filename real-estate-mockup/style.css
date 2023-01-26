@@ -1,5 +1,6 @@
 :root {
   --primary-color: #0d6efd;
+  --text-color-white: #fff;
 }
 section {
   min-height: 100vh;
@@ -28,6 +29,14 @@ section {
   display: block;
 }
 
+.navbar-nav .nav-item .nav-link {
+  color: #000;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: var(--primary-color);
+}
+
 #header-controls {
   margin-top: -5em;
 }
@@ -50,7 +59,7 @@ section {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #ffffff;
+  color: var(--text-color-white);
 }
 
 #slide-1 {
@@ -144,4 +153,22 @@ section {
     width: 10%;
     margin-left: 11%;
   }
+}
+
+.footer-link .list-group-item {
+  cursor: pointer;
+}
+
+.footer-link .list-group-item:hover {
+  text-decoration: underline;
+}
+
+.footer-link .list-group-item:first-of-type:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.btn-secondary-subtle:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color-white);
 }
