@@ -1,0 +1,98 @@
+body,
+.card,
+.custom-btn,
+.navbar {
+  background-color: #0c0c0c;
+  color: #ffffff;
+}
+
+#hero {
+  background-image: url("images/header-img.jpg");
+  background-position: 25em 0em;
+}
+
+img {
+  filter: grayscale(100%);
+  object-fit: cover;
+}
+
+#navbar-logo {
+  height: 5em;
+}
+
+.upper-img {
+  height: 20em;
+  width: 20em;
+}
+
+.lower-img {
+  height: 20em;
+  width: 40.5em;
+}
+
+.solo-img {
+  height: 40.5em;
+}
+
+@media only screen and (max-width: 480px) {
+  .upper-img {
+    margin-bottom: 0.5em;
+  }
+  .lower-img,
+  .solo-img {
+    width: 20em;
+    height: 20em;
+  }
+  .solo-img {
+    margin-top: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .upper-img {
+    margin-bottom: 0.5em;
+  }
+  .lower-img,
+  .solo-img {
+    width: 20em;
+    height: 20em;
+    margin-bottom: 0.5em;
+  }
+  .solo-img {
+    margin-top: 0.5em;
+  }
+}
+
+.recent-img {
+  height: 20em;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #5a5a5a;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+.bi-circle {
+  font-size: 0.4rem;
+}
+
+small.text-decoration-underline {
+  cursor: pointer;
+}
+
+small.text-decoration-underline:hover {
+  color: #d3d3d3;
+}
+
+.imghvr-blur {
+  background-color: #0c0c0c;
+}
+
+.imghvr-blur figcaption {
+  background-color: #d3d3d3;
+}

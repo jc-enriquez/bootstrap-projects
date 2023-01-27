@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photography</title>
+    <title>Litrato</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -18,19 +18,21 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
     <!-- Lightbox CSS -->
-    <link rel="stylesheet" href="lightbox.min.css" />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
     <!-- Swiper CSS -->
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <!-- Image Hover CSS -->
+    <link rel="stylesheet" href="css/imagehover.min.css" />
     <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <main>
       <!-- Navigation Bar -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container align-items-center">
           <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="" srcset="" id="navbar-logo" />
@@ -57,22 +59,22 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Gallery</a>
+                <a class="nav-link text-white" href="#gallery">Gallery</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Recent Works</a>
+                <a class="nav-link text-white" href="#recent-works"
+                  >Recent Works</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">About</a>
+                <a class="nav-link text-white" href="#about">About</a>
               </li>
             </ul>
-            <div class="icons text-white">
-              <span
-                ><i class="bi bi-geo-alt-fill"></i> Insert Location Here</span
+            <div class="icons text-white d-none d-lg-block">
+              <span class="me-2"
+                ><i class="bi bi-geo-alt-fill"></i> Manila, Philippines</span
               >
-              <span
-                ><i class="bi bi-telephone"></i> Insert Phone Number Here</span
-              >
+              <span><i class="bi bi-telephone"></i> +34 5567 2243 322</span>
             </div>
           </div>
         </div>
@@ -81,20 +83,26 @@
       <!-- Hero Section -->
       <section id="hero" class="text-white">
         <div class="container">
-          <div class="row vh-100 align-items-center text-center">
-            <div class="col-lg-6">
-              <h1>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Ratione, quibusdam?
-              </h1>
-              <hr class="w-50 mx-auto" />
-              <small class="d-block">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Facilis, at?
-              </small>
-              <button class="btn btn-transparent text-white border-white">
-                Contact me
-              </button>
+          <div class="row text-center">
+            <div class="col-lg-7">
+              <div
+                class="h-100 d-flex flex-column justify-content-between align-items-center"
+              >
+                <h1>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Ratione, quibusdam?
+                </h1>
+                <hr class="w-50 mx-auto" />
+                <small class="d-block">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Facilis, at?
+                </small>
+                <button
+                  class="btn btn-transparent text-white border-white w-25 mx-auto"
+                >
+                  Contact me
+                </button>
+              </div>
             </div>
             <div class="col-lg-6"></div>
           </div>
@@ -103,7 +111,10 @@
       <!-- End of Hero Section -->
       <!-- Gallery Section -->
       <section id="gallery" class="container">
+        <!-- Header -->
         <h2 class="mb-4">Gallery</h2>
+        <!-- End of Header -->
+        <!-- Navigation -->
         <ul class="nav nav-tabs mx-auto" id="myTab" role="tablist">
           <!-- Navlink for Wedding -->
           <li class="nav-item" role="presentation">
@@ -166,8 +177,10 @@
             </button>
           </li>
         </ul>
-        <!-- Wedding Tab -->
+        <!-- End of Navigation -->
+        <!-- Tab Content -->
         <div class="tab-content" id="myTabContent">
+          <!-- Start of Wedding Tab Pane -->
           <div
             class="tab-pane fade show active"
             id="wedding-tab-pane"
@@ -175,19 +188,31 @@
             aria-labelledby="wedding-tab"
             tabindex="0"
           >
+            <!-- Start of Main Row -->
             <div class="row mt-5">
+              <!-- Start of col-lg-6 -->
               <div class="col-lg-6">
+                <!-- Start of row within col-lg-6 -->
                 <div class="row row-gap-2 col-gap-1">
-                  <div class="col-lg-6">
+                  <!-- Start of col-lg-6 -->
+                  <figure class="col-lg-6 imghvr-blur">
                     <a href="images/tab1-img1.jpg" data-lightbox="wedding">
                       <img
                         src="images/tab1-img1.jpg"
                         alt=""
                         class="upper-img mx-auto d-block"
                       />
+                      <figcaption
+                        class="d-flex flex-column justify-content-center align-items-center"
+                      >
+                        <i class="bi bi-search fs-1 ih-fade-up"></i>
+                        <p class="ih-fade-up">View Larger</p>
+                      </figcaption>
                     </a>
-                  </div>
-                  <div class="col-lg-6">
+                  </figure>
+                  <!-- End of col-lg-6 -->
+                  <!-- Start of col-lg-6 -->
+                  <figure class="col-lg-6">
                     <a href="images/tab1-img2.jpg" data-lightbox="wedding">
                       <img
                         src="images/tab1-img2.jpg"
@@ -195,8 +220,10 @@
                         class="upper-img mx-auto d-block"
                       />
                     </a>
-                  </div>
-                  <div class="col-lg-12">
+                  </figure>
+                  <!-- End of col-lg-6 -->
+                  <!-- Start of col-lg-12 -->
+                  <figure class="col-lg-12">
                     <a href="images/tab1-img3.jpg" data-lightbox="wedding">
                       <img
                         src="images/tab1-img3.jpg"
@@ -204,10 +231,14 @@
                         class="lower-img mx-auto d-block"
                       />
                     </a>
-                  </div>
+                  </figure>
+                  <!-- End of col-lg-12 -->
                 </div>
+                <!-- End of row within col-lg-6 -->
               </div>
-              <div class="col-lg-4">
+              <!-- End of col-lg-6 -->
+              <!-- Start of col-lg-4 -->
+              <figure class="col-lg-4">
                 <a href="images/tab1-img4.jpg" data-lightbox="wedding">
                   <img
                     src="images/tab1-img4.jpg"
@@ -215,30 +246,39 @@
                     class="solo-img mx-auto d-block"
                   />
                 </a>
-              </div>
-              <div class="col-lg-2">
+              </figure>
+              <!-- End of col-lg-4 -->
+              <!-- Start of col-lg-2 -->
+              <div class="col-lg-2 order-first order-lg-last">
                 <blockquote>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                  laboriosam quis nisi eos rerum deserunt consequatur quasi
-                  nostrum vero mollitia corporis saepe esse dolore facilis
-                  molestias, ad voluptas porro quo. Consequatur id rem modi ipsa
-                  neque laboriosam ut! Consequatur sed cum voluptate quis et
-                  corrupti modi, libero voluptates! Cupiditate, nostrum!
+                  Jean shorts meh lomo praxis try-hard taxidermy gluten-free.
+                  Vice health goth hexagon small batch retro post-ironic bruh
+                  wayfarers forage sustainable intelligentsia squid bicycle
+                  rights fixie la croix. Pork belly af deep v, sriracha hexagon
+                  put a bird on it lyft selvage thundercats. Gatekeep selfies
+                  coloring book, lo-fi YOLO affogato banh mi selvage tonx
+                  shoreditch meditation four loko migas. PBR&B keytar master
+                  cleanse, bicycle rights woke hoodie cold-pressed bruh vinyl
+                  shabby chic echo park. Mixtape photo booth gastropub PBR&B
+                  cred, pitchfork swag authentic synth chillwave church-key
+                  tattooed.
                 </blockquote>
               </div>
+              <!-- End of col-lg-2 -->
             </div>
+            <!-- End of Main Row -->
           </div>
-          <!-- End of Wedding Tab -->
+          <!-- End of Wedding Tab Pane -->
           <!-- Birthday Tab -->
           <div
             class="tab-pane fade"
             id="birthday-tab-pane"
             role="tabpanel"
             aria-labelledby="birthday-tab"
-            tabindex="0"
+            tabindex="1"
           >
             <div class="row mt-5">
-              <div class="col-lg-4">
+              <figure class="col-lg-4">
                 <a href="images/tab2-img4.jpg" data-lightbox="birthday">
                   <img
                     src="images/tab2-img4.jpg"
@@ -246,10 +286,10 @@
                     class="solo-img mx-auto d-block"
                   />
                 </a>
-              </div>
+              </figure>
               <div class="col-lg-6">
                 <div class="row row-gap-2 col-gap-1">
-                  <div class="col-lg-12">
+                  <figure class="col-lg-12">
                     <a href="images/tab2-img3.jpg" data-lightbox="birthday">
                       <img
                         src="images/tab2-img3.jpg"
@@ -257,8 +297,8 @@
                         class="lower-img mx-auto d-block"
                       />
                     </a>
-                  </div>
-                  <div class="col-lg-6">
+                  </figure>
+                  <figure class="col-lg-6">
                     <a href="images/tab2-img1.jpg" data-lightbox="birthday">
                       <img
                         src="images/tab2-img1.jpg"
@@ -266,8 +306,8 @@
                         class="upper-img mx-auto d-block"
                       />
                     </a>
-                  </div>
-                  <div class="col-lg-6">
+                  </figure>
+                  <figure class="col-lg-6">
                     <a href="images/tab2-img2.jpg" data-lightbox="birthday">
                       <img
                         src="images/tab2-img2.jpg"
@@ -275,44 +315,57 @@
                         class="upper-img mx-auto d-block"
                       />
                     </a>
-                  </div>
+                  </figure>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="col-lg-2 order-first order-lg-last">
                 <blockquote>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                  laboriosam quis nisi eos rerum deserunt consequatur quasi
-                  nostrum vero mollitia corporis saepe esse dolore facilis
-                  molestias, ad voluptas porro quo. Consequatur id rem modi ipsa
-                  neque laboriosam ut! Consequatur sed cum voluptate quis et
-                  corrupti modi, libero voluptates! Cupiditate, nostrum!
+                  Hammock man bun seitan, ennui poke raw denim drinking vinegar
+                  sartorial. Schlitz roof party drinking vinegar polaroid praxis
+                  VHS umami tonx street art affogato kale chips aesthetic
+                  gluten-free. Kinfolk swag banjo authentic. Vinyl retro ascot
+                  portland air plant artisan master cleanse. La croix coloring
+                  book roof party cray heirloom af thundercats meditation
+                  pickled salvia kale chips. Put a bird on it before they sold
+                  out kinfolk scenester heirloom paleo meh. Meh flannel locavore
+                  sriracha tousled intelligentsia palo santo letterpress
+                  ethical.
                 </blockquote>
               </div>
             </div>
           </div>
-          <!-- End of Birthday Tab -->
+          <!-- End of Birthday Tab Pane -->
           <!-- Graduation Tab -->
           <div
             class="tab-pane fade"
             id="graduation-tab-pane"
             role="tabpanel"
             aria-labelledby="graduation-tab"
-            tabindex="0"
+            tabindex="2"
           >
+            <!-- Start of Row -->
             <div class="row mt-5">
+              <!-- Start of col-lg-2 -->
               <div class="col-lg-2">
                 <blockquote>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                  laboriosam quis nisi eos rerum deserunt consequatur quasi
-                  nostrum vero mollitia corporis saepe esse dolore facilis
-                  molestias, ad voluptas porro quo. Consequatur id rem modi ipsa
-                  neque laboriosam ut! Consequatur sed cum voluptate quis et
-                  corrupti modi, libero voluptates! Cupiditate, nostrum!
+                  Waistcoat chicharrones vape hexagon beard mixtape XOXO.
+                  Gatekeep post-ironic stumptown selvage butcher copper mug.
+                  Chambray selvage disrupt kale chips venmo. Church-key tumblr
+                  tacos artisan air plant heirloom pabst distillery cardigan
+                  blog. Praxis selfies health goth crucifix vape godard cliche
+                  activated charcoal microdosing bruh yuccie drinking vinegar.
+                  Food truck tonx la croix wolf shoreditch squid kale chips,
+                  hashtag cold-pressed semiotics yuccie yes plz. Plaid master
+                  cleanse iceland vape synth humblebrag.
                 </blockquote>
               </div>
+              <!-- End of col-lg-2 -->
+              <!-- Start of col-lg-6 -->
               <div class="col-lg-6">
+                <!-- Start of row within col-lg-6 -->
                 <div class="row row-gap-2 col-gap-1">
-                  <div class="col-lg-6">
+                  <!-- Start of col-lg-6 -->
+                  <figure class="col-lg-6">
                     <a href="images/tab3-img1.jpg" data-lightbox="graduation">
                       <img
                         src="images/tab3-img1.jpg"
@@ -320,8 +373,10 @@
                         class="upper-img mx-auto d-block"
                       />
                     </a>
-                  </div>
-                  <div class="col-lg-6">
+                  </figure>
+                  <!-- End of col-lg-6 -->
+                  <!-- Start of col-lg-6 -->
+                  <figure class="col-lg-6">
                     <a href="images/tab3-img2.jpg" data-lightbox="graduation">
                       <img
                         src="images/tab3-img2.jpg"
@@ -329,8 +384,10 @@
                         class="upper-img mx-auto d-block"
                       />
                     </a>
-                  </div>
-                  <div class="col-lg-12">
+                  </figure>
+                  <!-- End of col-lg-6 -->
+                  <!-- Start of col-lg-12 -->
+                  <figure class="col-lg-12">
                     <a href="images/tab3-img3.jpg" data-lightbox="graduation">
                       <img
                         src="images/tab3-img3.jpg"
@@ -338,10 +395,14 @@
                         class="lower-img mx-auto d-block"
                       />
                     </a>
-                  </div>
+                  </figure>
+                  <!-- End of col-lg-12 -->
                 </div>
+                <!-- End of row within col-lg-6 -->
               </div>
-              <div class="col-lg-4">
+              <!-- End of col-lg-6 -->
+              <!-- Start of col-lg-4 -->
+              <figure class="col-lg-4">
                 <a href="images/tab3-img4.jpg" data-lightbox="graduation">
                   <img
                     src="images/tab3-img4.jpg"
@@ -349,11 +410,13 @@
                     class="solo-img mx-auto d-block"
                   />
                 </a>
-              </div>
+              </figure>
+              <!-- End of col-lg-4 -->
             </div>
+            <!-- End of row -->
           </div>
-          <!-- End of Graduation Tab -->
-          <!-- Events Tab -->
+          <!-- End of Graduation Tab Pane -->
+          <!-- Start of Events Tab -->
           <div
             class="tab-pane fade"
             id="events-tab-pane"
@@ -361,176 +424,283 @@
             aria-labelledby="events-tab"
             tabindex="0"
           >
-          <div class="row mt-5">
+            <!-- Start of Main Row -->
+            <div class="row mt-5">
+              <!-- Start of col-lg-2 -->
               <div class="col-lg-2">
                 <blockquote>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                  laboriosam quis nisi eos rerum deserunt consequatur quasi
-                  nostrum vero mollitia corporis saepe esse dolore facilis
-                  molestias, ad voluptas porro quo. Consequatur id rem modi ipsa
-                  neque laboriosam ut! Consequatur sed cum voluptate quis et
-                  corrupti modi, libero voluptates! Cupiditate, nostrum!
+                  Unicorn banh mi mumblecore cardigan actually, vaporware jean
+                  shorts everyday carry. Yr tousled ugh paleo same retro selvage
+                  knausgaard organic glossier. Godard craft beer hexagon,
+                  selfies migas hashtag sus austin health goth gluten-free echo
+                  park. Actually pork belly cray vibecession, YOLO asymmetrical
+                  tofu af single-origin coffee mukbang PBR&B gatekeep hot
+                  chicken affogato biodiesel. Enamel pin pitchfork occupy cred
+                  waistcoat aesthetic. Affogato vexillologist glossier, blue
+                  bottle gochujang whatever marfa lomo. Gentrify letterpress
+                  hexagon pug.
                 </blockquote>
               </div>
-            <div class="col-lg-4">
-              <a href="images/tab4-img1.jpg" data-lightbox="events">
-                <img
-                  src="images/tab4-img1.jpg"
-                  alt=""
-                  class="solo-img mx-auto d-block"
-                />
-              </a>
-            </div>
-            <div class="col-lg-6">
-              <div class="row row-gap-2 col-gap-1">
-                
-                <div class="col-lg-6">
-                  <a href="images/tab4-img2.jpg" data-lightbox="events">
-                    <img
-                      src="images/tab4-img2.jpg"
-                      alt=""
-                      class="upper-img mx-auto d-block"
-                    />
-                  </a>
+              <!-- End of col-lg-2 -->
+              <!-- Start of col-lg-4 -->
+              <figure class="col-lg-4">
+                <a href="images/tab4-img1.jpg" data-lightbox="events">
+                  <img
+                    src="images/tab4-img1.jpg"
+                    alt=""
+                    class="solo-img mx-auto d-block"
+                  />
+                </a>
+              </figure>
+              <!-- End of col-lg-4 -->
+              <!-- Start of col-lg-6 -->
+              <div class="col-lg-6">
+                <!-- Start of row within col-lg-6 -->
+                <div class="row row-gap-2 col-gap-1">
+                  <!-- Start of col-lg-6 -->
+                  <figure class="col-lg-6">
+                    <a href="images/tab4-img2.jpg" data-lightbox="events">
+                      <img
+                        src="images/tab4-img2.jpg"
+                        alt=""
+                        class="upper-img mx-auto d-block"
+                      />
+                    </a>
+                  </figure>
+                  <!-- End of col-lg-6 -->
+                  <!-- Start of col-lg-6 -->
+                  <figure class="col-lg-6">
+                    <a href="images/tab4-img3.jpg" data-lightbox="events">
+                      <img
+                        src="images/tab4-img3.jpg"
+                        alt=""
+                        class="upper-img mx-auto d-block"
+                      />
+                    </a>
+                  </figure>
+                  <!-- End of col-lg-6 -->
+                  <!-- Start of col-lg-12 -->
+                  <figure class="col-lg-12">
+                    <a href="images/tab4-img4.jpg" data-lightbox="events">
+                      <img
+                        src="images/tab4-img4.jpg"
+                        alt=""
+                        class="lower-img mx-auto d-block"
+                      />
+                    </a>
+                  </figure>
+                  <!-- End of col-lg-12 -->
                 </div>
-                <div class="col-lg-6">
-                  <a href="images/tab4-img3.jpg" data-lightbox="events">
-                    <img
-                      src="images/tab4-img3.jpg"
-                      alt=""
-                      class="upper-img mx-auto d-block"
-                    />
-                  </a>
-                </div>
-                <div4 class="col-lg-12">
-                  <a href="images/tab4-img4.jpg" data-lightbox="events">
-                    <img
-                      src="images/tab4-img4.jpg"
-                      alt=""
-                      class="lower-img mx-auto d-block"
-                    />
-                  </a>
-                </div4
+                <!-- End of row within col-lg-6 -->
               </div>
+              <!-- End of col-lg-6 -->
             </div>
+            <!-- End of Main Row -->
           </div>
           <!-- End of Events Tab -->
         </div>
+        <!-- End of Tab Content -->
       </section>
       <!-- End of Gallery Section -->
-
       <!-- Start of Recent Works -->
       <section id="recent-works" class="container">
         <h2 class="mb-4">Recent Works</h2>
         <div
           class="row border border-top border-bottom border-start-0 border-end-0 py-5"
         >
-          <div class="col-lg-4">
+          <article class="col-lg-4">
             <div class="card border-0">
               <div class="card-body px-0">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+                <h5 class="card-title">
+                  Actually everyday carry kitsch butcher
+                </h5>
                 <ul>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Pork belly vegan keytar put a bird on it yes plz roof
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Poutine cornhole kogi man braid fanny pack
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Swag poutine scenester photo booth
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Knausgaard whatever pok pok fit small batch
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Master cleanse flexitarian cliche poke
+                  </li>
                 </ul>
+                <div class="d-flex flex-row-reverse">
+                  <small class="text-decoration-underline">See more</small>
+                </div>
               </div>
-              <img src="images/tab1-img1.jpg" class="recent-img" alt="..." />
+              <figure>
+                <img src="images/tab1-img1.jpg" class="recent-img" alt="..." />
+              </figure>
               <button
                 href="#"
                 class="btn custom-btn mt-3 border border-light w-50 mx-auto"
               >
-                Go somewhere
+                Book Now
               </button>
             </div>
-          </div>
-          <div class="col-lg-4">
+          </article>
+          <article class="col-lg-4">
             <div class="card border-0">
               <div class="card-body px-0">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+                <h5 class="card-title">
+                  Poutine cornhole kogi man braid fanny pack
+                </h5>
                 <ul>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    90's before they sold out church-key tote bag
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Vaporware normcore jianbing post-ironic
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Messenger bag meh edison bulb disrupt austin
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Small batch brunch poutine copper mug selvage
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Adaptogen roof party irony, poke ramps slow-carb
+                  </li>
                 </ul>
+                <div class="d-flex flex-row-reverse">
+                  <small class="text-decoration-underline">See more</small>
+                </div>
               </div>
-              <img src="images/tab2-img1.jpg" class="recent-img" alt="..." />
+              <figure>
+                <img src="images/tab2-img1.jpg" class="recent-img" alt="..." />
+              </figure>
               <button
                 href="#"
                 class="btn custom-btn mt-3 border border-light w-50 mx-auto"
               >
-                Go somewhere
+                Book Now
               </button>
             </div>
-          </div>
-          <div class="col-lg-4">
+          </article>
+          <article class="col-lg-4">
             <div class="card border-0">
               <div class="card-body px-0">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+                <h5 class="card-title">Locavore hashtag woke photo booth</h5>
                 <ul>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Wayfarers same asymmetrical squid tacos
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Craft beer church-key tumblr, kogi fam occupy cred
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Offal ennui bicycle rights put a bird on it vape
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Four loko gluten-free enamel pin
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Vegan craft beer microdosing, ethical lo-fi chillwave
+                  </li>
                 </ul>
+                <div class="d-flex flex-row-reverse">
+                  <small class="text-decoration-underline">See more</small>
+                </div>
               </div>
-              <img src="images/tab3-img1.jpg" class="recent-img" alt="..." />
+              <figure>
+                <img src="images/tab3-img1.jpg" class="recent-img" alt="..." />
+              </figure>
               <button
                 href="#"
                 class="btn custom-btn mt-3 border border-light w-50 mx-auto"
               >
-                Go somewhere
+                Book Now
               </button>
             </div>
-          </div>
+          </article>
         </div>
       </section>
       <!-- End of Recent Works -->
       <!-- About me -->
-      <section class="container">
+      <section class="container" id="about">
         <h2 class="mb-4">About Me</h2>
         <div class="row">
           <div class="col-lg-6">
             <div class="row row-gap-2">
               <div class="col-lg-6">
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos cum dolore repellat vel nam itaque explicabo, in ducimus, error temporibus beatae corporis sequi est aliquam! Placeat, quidem perspiciatis, quia quisquam doloremque sequi quae harum odit accusamus nam dolore tenetur. Amet id obcaecati ut pariatur ex mollitia cumque numquam vel, at consequatur dicta reprehenderit error. Maxime sint ipsam reprehenderit facere facilis.</p>
+                <p class="">
+                  Gluten-free poke unicorn church-key. Seitan hella celiac
+                  vegan. Bitters sustainable narwhal beard photo booth bruh etsy
+                  kogi cliche health goth put a bird on it. Lomo mixtape
+                  gentrify next level stumptown raw denim ugh pug.Organic small
+                  batch meggings wolf subway tile hella. Lo-fi hashtag put a
+                  bird on it, bicycle rights Brooklyn jean shorts bitters
+                  celiac. Direct trade fashion axe vape, roof party DSA
+                  stumptown +1 flannel. Authentic ramps la croix narwhal
+                  helvetica salvia woke actually fam.
+                </p>
               </div>
-              <div class="col-lg-6">
-                <img src="images/tab1-img2.jpg" class="upper-img border-start ps-2" alt="">
-              </div>
-              <div class="col-lg-12">
-                <img src="images/tab2-img2.jpg" class="w-100 border-top py-2"alt="">
-              </div>
+              <figure class="col-lg-6">
+                <img
+                  src="images/tab1-img2.jpg"
+                  class="upper-img border-start ps-2"
+                  alt=""
+                />
+              </figure>
+              <figure class="col-lg-12">
+                <img
+                  src="images/tab2-img2.jpg"
+                  class="w-100 border-top py-2"
+                  alt=""
+                />
+              </figure>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="row row-gap-2">
-              <div class="col-lg-12">
-                <img src="images/tab3-img2.jpg" class="border-bottom w-100 pb-2"alt="">
-              </div>
+              <figure class="col-lg-12">
+                <img
+                  src="images/tab3-img2.jpg"
+                  class="border-bottom w-100 pb-2"
+                  alt=""
+                />
+              </figure>
               <div class="col-lg-6">
-                <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae quidem maxime illum deleniti tenetur dolorem quia cum, esse nulla nemo sequi doloribus! Placeat vitae perspiciatis aliquid ut illo, ducimus, magnam fuga at autem incidunt saepe odit. Similique placeat ullam necessitatibus quam, dolor officia? Labore cumque quia architecto rerum consequuntur sit. Illo fuga modi atque, officia amet deserunt aut quidem necessitatibus.</p>
+                <p class="">
+                  Brunch coloring book mumblecore crucifix gentrify authentic
+                  copper mug. Raclette af selfies organic skateboard enamel pin
+                  normcore kitsch flexitarian four loko mukbang bicycle rights.
+                  Brooklyn seitan subway tile typewriter pop-up poke waistcoat
+                  flannel palo santo chambray. Fingerstache mumblecore master
+                  cleanse fashion axe enamel pin twee. Williamsburg 8-bit
+                  knausgaard, whatever truffaut activated charcoal readymade
+                  vegan disrupt.
+                </p>
               </div>
-              <div class="col-lg-6">
-                <img src="images/tab4-img2.jpg" class="w-100 border-start ps-2 upper-img" alt="">
-              </div>
+              <figure class="col-lg-6">
+                <img
+                  src="images/tab4-img2.jpg"
+                  class="w-100 border-start ps-2 upper-img"
+                  alt=""
+                />
+              </figure>
             </div>
           </div>
         </div>
@@ -538,37 +708,51 @@
       <!-- End of About me -->
       <section class="container">
         <h2 class="mb-4">Testimonials</h2>
-        <div class="row">
-          <div class="col-lg-3">
-            <img src="images/tab1-img3.jpg" alt="" class="w-100 upper-img">
-          </div>
-          <div class="col-lg-3">
-            <img src="images/tab2-img3.jpg" alt="" class="w-100 upper-img">
-          </div>
+        <div class="row align-items-center">
           <div class="col-lg-6">
-            <!-- Slider main container -->
             <div class="swiper">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium asperiores quis molestias. Nostrum quisquam repudiandae alias aspernatur aperiam, quia unde reiciendis sit ab ex necessitatibus iure. Vero sequi, nulla alias amet dignissimos ipsam harum tenetur, delectus commodi ipsa doloremque, dolorum consequatur molestias ab sed? Architecto quaerat laborum labore facilis libero enim odit, corrupti dignissimos. Magnam iste laboriosam id voluptas quam!
+                  Put a bird on it migas listicle prism narwhal taiyaki
+                  knausgaard ethical hammock fanny pack semiotics food truck
+                  next level hashtag direct trade. Vinyl JOMO poke PBR&B forage
+                  tote bag DSA polaroid cardigan keytar vice. Lyft kombucha
+                  banjo lomo, semiotics schlitz plaid ugh lo-fi artisan. Quinoa
+                  you probably haven't heard of them pitchfork snackwave
+                  scenester seitan.
                 </div>
                 <div class="swiper-slide">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium asperiores quis molestias. Nostrum quisquam repudiandae alias aspernatur aperiam, quia unde reiciendis sit ab ex necessitatibus iure. Vero sequi, nulla alias amet dignissimos ipsam harum tenetur, delectus commodi ipsa doloremque, dolorum consequatur molestias ab sed? Architecto quaerat laborum labore facilis libero enim odit, corrupti dignissimos. Magnam iste laboriosam id voluptas quam!
+                  Fixie godard art party try-hard. Salvia DSA health goth
+                  franzen prism stumptown raw denim cray deep v put a bird on it
+                  polaroid synth bicycle rights shoreditch tonx. Twee normcore
+                  messenger bag, deep v ethical chia la croix. Taxidermy pabst
+                  XOXO chillwave.
                 </div>
                 <div class="swiper-slide">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium asperiores quis molestias. Nostrum quisquam repudiandae alias aspernatur aperiam, quia unde reiciendis sit ab ex necessitatibus iure. Vero sequi, nulla alias amet dignissimos ipsam harum tenetur, delectus commodi ipsa doloremque, dolorum consequatur molestias ab sed? Architecto quaerat laborum labore facilis libero enim odit, corrupti dignissimos. Magnam iste laboriosam id voluptas quam!
+                  I'm baby hammock irony freegan ethical. Authentic copper mug
+                  mustache poke bodega boys butcher hot chicken pickled health
+                  goth. Af try-hard small batch iPhone, raclette fam hashtag
+                  kale chips typewriter PBR&B next level woke. Tonx crucifix
+                  chambray meditation shoreditch seitan twee normcore cornhole
+                  poke. Chia affogato flannel neutra seitan raclette. Wayfarers
+                  ethical XOXO man braid woke whatever bodega boys. Adaptogen
+                  migas next level hexagon distillery.
                 </div>
-            </div>
-            <!-- If we need navigation buttons -->
-            <!-- If we need scrollbar -->
-            <div class="mt-5">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-scrollbar"></div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="mt-5">
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
           </div>
+          <figure class="col-lg-3">
+            <img src="images/tab1-img3.jpg" alt="" class="w-100 upper-img" />
+          </figure>
+          <figure class="col-lg-3">
+            <img src="images/tab2-img3.jpg" alt="" class="w-100 upper-img" />
+          </figure>
         </div>
       </section>
     </main>
@@ -576,11 +760,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <!-- Lightbox JS -->
-    <script src="lightbox-plus-jquery.min.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- Main JS -->
-    <script src="script.js"></script>
-
+    <script src="js/script.js"></script>
   </body>
 </html>
