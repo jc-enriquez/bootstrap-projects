@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 :root {
   --primary-color: #0c0c0c;
   --secondary-color: #5a5a5a;
   --text-primary: #fff;
   --text-secondary: #d3d3d3;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 body,
@@ -16,11 +22,6 @@ body,
   background-color: var(--primary-color);
   color: var(--text-primary);
 }
-/* 
-#hero {
-  background-image: url("../images/header-img.jpg");
-  background-position: center;
-} */
 
 img {
   filter: grayscale(100%);
@@ -45,12 +46,19 @@ img {
   height: 40.5em;
 }
 
+.recent-img {
+  height: 25em;
+  width: 25em;
+}
+
 @media only screen and (max-width: 480px) {
   .upper-img {
     margin-bottom: 0.5em;
   }
   .lower-img,
-  .solo-img {
+  .solo-img,
+  .recent-img,
+  .about-me-img {
     width: 20em;
     height: 20em;
   }
@@ -72,11 +80,6 @@ img {
   .solo-img {
     margin-top: 0.5em;
   }
-}
-
-.recent-img {
-  height: 25em;
-  width: 25em;
 }
 
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
