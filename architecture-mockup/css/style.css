@@ -23,6 +23,12 @@ img {
   object-fit: cover;
 }
 
+@media screen and (min-width: 1024px) {
+  .img-index {
+    width: 13em;
+  }
+}
+
 hr {
   border: 1px solid #000;
 }
@@ -106,6 +112,7 @@ hr {
 
 .img-blog-sm {
   height: 15em;
+  object-fit: cover;
 }
 
 .custom-card {
